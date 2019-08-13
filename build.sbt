@@ -650,12 +650,6 @@ lazy val microsite = inDoc.as.module
   )
   .settings(ParadoxMaterialThemePlugin.paradoxMaterialThemeSettings(Paradox))
   .settings(
-    // FIXME: mdoc plays badly with 2.12.9 for some reason,
-    //  somehow Scoverage ends up enabled as a compiler plugin despite everything???
-    //  error: Caused by: java.lang.RuntimeException: Cannot invoke plugin without specifying <dataDir>
-    //        at scoverage.ScoveragePlugin.processOptions(plugin.scala:43)
-    //        at scala.tools.nsc.plugins.Plugin.init(Plugin.scala:69)
-    scalaVersion := "2.12.8",
     coverageEnabled := false,
 
     skip in publish := true,
