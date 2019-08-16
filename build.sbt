@@ -318,6 +318,19 @@ lazy val distageProxyCglib = inDiStage.as.module
 
 lazy val distageCore = inDiStage.as.module
   .depends(fundamentalsFunctionalJvm, distageModel, distageProxyCglib)
+  .settings(
+    addCompilerPlugin("ch.epfl.scala" %% "scalac-profiling" % "1.0.0"),
+    scalacOptions += "-Ystatistics:typer",
+    scalacOptions += "-Yprofile-enabled",
+    scalacOptions ++= Seq(
+      "-P:scalac-profiling:no-profiledb",
+      "-P:scalac-profiling:generate-macro-flamegraph",
+      "-P:scalac-profiling:show-profiles",
+    ),
+    scalacOptions in Test ++= Seq(
+      "-P:scalac-profiling:/Users/kai/src/izumi-r2/distage/distage-core/src/test/scala/",
+    ),
+  )
 
 lazy val distageConfig = inDiStage.as.module
   .depends(
