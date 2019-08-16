@@ -1,5 +1,8 @@
 package izumi.fundamentals.reflection.macrortti
 
+import java.io.{ByteArrayOutputStream, ObjectOutput, ObjectOutputStream}
+import java.nio.charset.StandardCharsets
+
 import izumi.fundamentals.platform.console.TrivialLogger
 import izumi.fundamentals.reflection.TrivialMacroLogger
 import izumi.fundamentals.reflection.macrortti.LightTypeTag.ReflectionLock
@@ -31,6 +34,15 @@ final class LightTypeTagMacro(override val c: blackbox.Context) extends LTTLifta
     makeFLTTImpl(weakTypeOf[T])
   }
 
+  @inline def makeWeakTagString[T: c.WeakTypeTag]: c.Expr[String] = {
+    val bytes = new ByteArrayOutputStream
+    val oo = new ObjectOutputStream(bytes)
+    val res = impl.makeFLTT(weakTypeOf[T])
+    oo.writeObject(res)
+    oo.close()
+    c.Expr[String](Liftable.liftString(bytes.toString("ISO-8859-1")))
+  }
+
   def makeHKTagRaw[ArgStruct](argStruct: Type): c.Expr[LTag.WeakHK[ArgStruct]] = {
     def badShapeError(t: TypeApi) = {
       c.abort(c.enclosingPosition, s"Expected type shape RefinedType `{ type Arg[A] = X[A] }` for summoning `LightTagK[X]`, but got $t (raw: ${showRaw(t)} ${t.getClass})")
@@ -57,9 +69,11 @@ final class LightTypeTagMacro(override val c: blackbox.Context) extends LTTLifta
 // FIXME: Object makes this impossible to override ...
 object LightTypeTagImpl {
 
-  def makeFLTT(u: Universe)(typeTag: u.Type): LightTypeTag = ReflectionLock.synchronized {
-    val logger = TrivialLogger.make[this.type](LightTypeTag.loggerId)
-    new LightTypeTagImpl[u.type](u, logger).makeFLTT(typeTag)
+  def makeFLTT(u: Universe)(typeTag: u.Type): LightTypeTag = {
+    ReflectionLock.synchronized {
+      val logger = TrivialLogger.make[this.type](LightTypeTag.loggerId)
+      new LightTypeTagImpl[u.type](u, logger).makeFLTT(typeTag)
+    }
   }
 }
 
