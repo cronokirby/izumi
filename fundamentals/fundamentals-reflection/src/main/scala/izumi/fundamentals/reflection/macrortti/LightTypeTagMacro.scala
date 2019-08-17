@@ -1,5 +1,6 @@
 package izumi.fundamentals.reflection.macrortti
 
+import boopickle.DefaultBasic
 import izumi.fundamentals.platform.console.TrivialLogger
 import izumi.fundamentals.reflection.TrivialMacroLogger
 import izumi.fundamentals.reflection.macrortti.LightTypeTag.ReflectionLock
@@ -11,7 +12,8 @@ import scala.language.experimental.macros
 import scala.reflect.api.Universe
 import scala.reflect.macros.blackbox
 
-final class LightTypeTagMacro(override val c: blackbox.Context) extends LTTLiftables[blackbox.Context](c) {
+final class LightTypeTagMacro(override val c: blackbox.Context) extends LightTypeTagMacro0[blackbox.Context](c)
+class LightTypeTagMacro0[C <: blackbox.Context](override val c: C) extends LTTLiftables[C](c) {
 
   import c.universe._
 
@@ -29,6 +31,13 @@ final class LightTypeTagMacro(override val c: blackbox.Context) extends LTTLifta
 
   @inline def makeWeakTagCore[T: c.WeakTypeTag]: c.Expr[LightTypeTag] = {
     makeFLTTImpl(weakTypeOf[T])
+  }
+
+  @inline def makeWeakTagString[T: c.WeakTypeTag]: c.Expr[String] = {
+    val res = impl.makeFLTT(weakTypeOf[T])
+    val bytes = DefaultBasic.Pickle(res).toByteBuffer
+
+    c.Expr[String](Liftable.liftString(new String(bytes.array(), "ISO-8859-1")))
   }
 
   def makeHKTagRaw[ArgStruct](argStruct: Type): c.Expr[LTag.WeakHK[ArgStruct]] = {

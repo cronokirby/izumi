@@ -3,7 +3,7 @@ package izumi.fundamentals.reflection
 import izumi.fundamentals.platform.console.TrivialLogger
 import izumi.fundamentals.reflection.ReflectionUtil.{Kind, kindOf}
 import izumi.fundamentals.reflection.Tags.{defaultTagImplicitError, hktagFormat, hktagFormatMap}
-import izumi.fundamentals.reflection.macrortti.{LTag, LightTypeTag, LightTypeTagMacro}
+import izumi.fundamentals.reflection.macrortti.{LTag, LightTypeTag, LightTypeTagMacro, LightTypeTagMacro0}
 
 import scala.annotation.{implicitNotFound, tailrec}
 import scala.collection.immutable.ListMap
@@ -61,11 +61,11 @@ class TagMacro(val c: blackbox.Context) {
   //  [info] You may wish to define T as +T instead. (SLS 4.5)
   //  [info]       assert(Tag[Nothing].tpe == safe[Nothing])
   def FIXMEgetLTagAlso[DIU <: Tags with Singleton, T](t: c.Expr[DIU#ScalaReflectTypeTag[T]])(implicit w: c.WeakTypeTag[T]): c.Expr[DIU#Tag[T]] = {
-    val tagMacro = new LightTypeTagMacro(c)
-    val ltag = tagMacro.makeWeakTagCore[T](w.asInstanceOf[tagMacro.c.WeakTypeTag[T]]).asInstanceOf[c.Expr[LightTypeTag]]
+    val tagMacro = new LightTypeTagMacro0[c.type](c)
+    val ltag = tagMacro.makeWeakTagString[T](w.asInstanceOf[tagMacro.c.WeakTypeTag[T]]).asInstanceOf[c.Expr[String]]
 
-    reify {
-      c.prefix.asInstanceOf[Expr[DIU#TagObject]].splice.apply[T](t.splice, ltag.splice)
+    c.Expr[DIU#Tag[T]] {
+      q"${c.prefix.asInstanceOf[Expr[DIU#TagObject]]}.apply[$w]($t, _root_.izumi.fundamentals.reflection.macrortti.LightTypeTag.parse($ltag: String))"
     }
   }
 
