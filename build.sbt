@@ -9,7 +9,7 @@ lazy val `fundamentals-collections` = project.in(file("fundamentals/fundamentals
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -102,7 +102,7 @@ lazy val `fundamentals-collections` = project.in(file("fundamentals/fundamentals
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -131,7 +131,7 @@ lazy val `fundamentals-platform` = project.in(file("fundamentals/fundamentals-pl
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -224,7 +224,7 @@ lazy val `fundamentals-platform` = project.in(file("fundamentals/fundamentals-pl
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -256,7 +256,7 @@ lazy val `fundamentals-functional` = project.in(file("fundamentals/fundamentals-
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -349,7 +349,7 @@ lazy val `fundamentals-functional` = project.in(file("fundamentals/fundamentals-
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -378,7 +378,7 @@ lazy val `fundamentals-bio` = project.in(file("fundamentals/fundamentals-bio"))
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -471,7 +471,7 @@ lazy val `fundamentals-bio` = project.in(file("fundamentals/fundamentals-bio"))
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -506,7 +506,7 @@ lazy val `fundamentals-typesafe-config` = project.in(file("fundamentals/fundamen
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -599,7 +599,7 @@ lazy val `fundamentals-typesafe-config` = project.in(file("fundamentals/fundamen
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -636,7 +636,7 @@ lazy val `fundamentals-reflection` = project.in(file("fundamentals/fundamentals-
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -729,7 +729,7 @@ lazy val `fundamentals-reflection` = project.in(file("fundamentals/fundamentals-
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -765,7 +765,7 @@ lazy val `fundamentals-json-circe` = project.in(file("fundamentals/fundamentals-
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -858,7 +858,7 @@ lazy val `fundamentals-json-circe` = project.in(file("fundamentals/fundamentals-
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -898,7 +898,7 @@ lazy val `distage-model` = project.in(file("distage/distage-model"))
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -991,7 +991,7 @@ lazy val `distage-model` = project.in(file("distage/distage-model"))
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -1030,7 +1030,7 @@ lazy val `distage-proxy-cglib` = project.in(file("distage/distage-proxy-cglib"))
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -1123,7 +1123,7 @@ lazy val `distage-proxy-cglib` = project.in(file("distage/distage-proxy-cglib"))
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -1159,7 +1159,7 @@ lazy val `distage-core` = project.in(file("distage/distage-core"))
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -1252,7 +1252,7 @@ lazy val `distage-core` = project.in(file("distage/distage-core"))
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -1286,7 +1286,7 @@ lazy val `distage-config` = project.in(file("distage/distage-config"))
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -1379,7 +1379,7 @@ lazy val `distage-config` = project.in(file("distage/distage-config"))
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -1414,7 +1414,7 @@ lazy val `distage-roles-api` = project.in(file("distage/distage-roles-api"))
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -1507,7 +1507,7 @@ lazy val `distage-roles-api` = project.in(file("distage/distage-roles-api"))
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -1539,7 +1539,7 @@ lazy val `distage-plugins` = project.in(file("distage/distage-plugins"))
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -1632,7 +1632,7 @@ lazy val `distage-plugins` = project.in(file("distage/distage-plugins"))
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -1668,7 +1668,7 @@ lazy val `distage-roles` = project.in(file("distage/distage-roles"))
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -1761,7 +1761,7 @@ lazy val `distage-roles` = project.in(file("distage/distage-roles"))
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -1802,7 +1802,7 @@ lazy val `distage-static` = project.in(file("distage/distage-static"))
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -1895,7 +1895,7 @@ lazy val `distage-static` = project.in(file("distage/distage-static"))
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -1928,7 +1928,7 @@ lazy val `distage-testkit` = project.in(file("distage/distage-testkit"))
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -2022,7 +2022,7 @@ lazy val `distage-testkit` = project.in(file("distage/distage-testkit"))
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -2063,7 +2063,7 @@ lazy val `logstage-api` = project.in(file("logstage/logstage-api"))
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -2156,7 +2156,7 @@ lazy val `logstage-api` = project.in(file("logstage/logstage-api"))
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -2190,7 +2190,7 @@ lazy val `logstage-core` = project.in(file("logstage/logstage-core"))
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -2283,7 +2283,7 @@ lazy val `logstage-core` = project.in(file("logstage/logstage-core"))
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -2322,7 +2322,7 @@ lazy val `logstage-rendering-circe` = project.in(file("logstage/logstage-renderi
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -2415,7 +2415,7 @@ lazy val `logstage-rendering-circe` = project.in(file("logstage/logstage-renderi
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -2448,7 +2448,7 @@ lazy val `logstage-di` = project.in(file("logstage/logstage-di"))
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -2541,7 +2541,7 @@ lazy val `logstage-di` = project.in(file("logstage/logstage-di"))
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -2577,7 +2577,7 @@ lazy val `logstage-config` = project.in(file("logstage/logstage-config"))
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -2670,7 +2670,7 @@ lazy val `logstage-config` = project.in(file("logstage/logstage-config"))
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -2703,7 +2703,7 @@ lazy val `logstage-adapter-slf4j` = project.in(file("logstage/logstage-adapter-s
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -2799,7 +2799,7 @@ lazy val `logstage-adapter-slf4j` = project.in(file("logstage/logstage-adapter-s
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -2832,7 +2832,7 @@ lazy val `logstage-sink-slf4j` = project.in(file("logstage/logstage-sink-slf4j")
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -2925,7 +2925,7 @@ lazy val `logstage-sink-slf4j` = project.in(file("logstage/logstage-sink-slf4j")
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -2960,7 +2960,7 @@ lazy val `idealingua-v1-model` = project.in(file("idealingua-v1/idealingua-v1-mo
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -3053,7 +3053,7 @@ lazy val `idealingua-v1-model` = project.in(file("idealingua-v1/idealingua-v1-mo
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -3087,7 +3087,7 @@ lazy val `idealingua-v1-core` = project.in(file("idealingua-v1/idealingua-v1-cor
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -3180,7 +3180,7 @@ lazy val `idealingua-v1-core` = project.in(file("idealingua-v1/idealingua-v1-cor
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -3217,7 +3217,7 @@ lazy val `idealingua-v1-runtime-rpc-scala` = project.in(file("idealingua-v1/idea
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -3310,7 +3310,7 @@ lazy val `idealingua-v1-runtime-rpc-scala` = project.in(file("idealingua-v1/idea
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -3351,7 +3351,7 @@ lazy val `idealingua-v1-runtime-rpc-http4s` = project.in(file("idealingua-v1/ide
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -3444,7 +3444,7 @@ lazy val `idealingua-v1-runtime-rpc-http4s` = project.in(file("idealingua-v1/ide
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -3484,7 +3484,7 @@ lazy val `idealingua-v1-transpilers` = project.in(file("idealingua-v1/idealingua
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -3578,7 +3578,7 @@ lazy val `idealingua-v1-transpilers` = project.in(file("idealingua-v1/idealingua
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -3621,7 +3621,7 @@ lazy val `idealingua-v1-test-defs` = project.in(file("idealingua-v1/idealingua-v
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -3714,7 +3714,7 @@ lazy val `idealingua-v1-test-defs` = project.in(file("idealingua-v1/idealingua-v
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -3746,7 +3746,7 @@ lazy val `idealingua-v1-runtime-rpc-typescript` = project.in(file("idealingua-v1
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -3839,7 +3839,7 @@ lazy val `idealingua-v1-runtime-rpc-typescript` = project.in(file("idealingua-v1
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -3868,7 +3868,7 @@ lazy val `idealingua-v1-runtime-rpc-go` = project.in(file("idealingua-v1/idealin
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -3961,7 +3961,7 @@ lazy val `idealingua-v1-runtime-rpc-go` = project.in(file("idealingua-v1/idealin
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -3990,7 +3990,7 @@ lazy val `idealingua-v1-runtime-rpc-csharp` = project.in(file("idealingua-v1/ide
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -4083,7 +4083,7 @@ lazy val `idealingua-v1-runtime-rpc-csharp` = project.in(file("idealingua-v1/ide
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -4112,7 +4112,7 @@ lazy val `idealingua-v1-compiler` = project.in(file("idealingua-v1/idealingua-v1
     scalaVersion := crossScalaVersions.value.head,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     publishArtifact in (Test, packageBin) := true,
     publishArtifact in (Test, packageDoc) := false,
@@ -4218,7 +4218,7 @@ lazy val `idealingua-v1-compiler` = project.in(file("idealingua-v1/idealingua-v1
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -4401,7 +4401,7 @@ lazy val `microsite` = project.in(file("doc/microsite"))
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -4558,7 +4558,7 @@ lazy val `sbt-izumi-deps` = project.in(file("sbt-plugins/sbt-izumi-deps"))
         "-Ywarn-unused-import",
         "-Ywarn-value-discard"
       )
-      case (_, "2.13.0") => Seq(
+      case (_, "2.13.1") => Seq(
         "-Xsource:2.13",
         "-explaintypes",
         "-Wdead-code",
@@ -4585,7 +4585,7 @@ lazy val `fundamentals` = (project in file(".agg/fundamentals-fundamentals"))
     skip in publish := true,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     scalaVersion := crossScalaVersions.value.head
   )
@@ -4605,7 +4605,7 @@ lazy val `fundamentals-jvm` = (project in file(".agg/fundamentals-fundamentals-j
     skip in publish := true,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     scalaVersion := crossScalaVersions.value.head
   )
@@ -4625,7 +4625,7 @@ lazy val `distage` = (project in file(".agg/distage-distage"))
     skip in publish := true,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     scalaVersion := crossScalaVersions.value.head
   )
@@ -4647,7 +4647,7 @@ lazy val `distage-jvm` = (project in file(".agg/distage-distage-jvm"))
     skip in publish := true,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     scalaVersion := crossScalaVersions.value.head
   )
@@ -4669,7 +4669,7 @@ lazy val `logstage` = (project in file(".agg/logstage-logstage"))
     skip in publish := true,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     scalaVersion := crossScalaVersions.value.head
   )
@@ -4689,7 +4689,7 @@ lazy val `logstage-jvm` = (project in file(".agg/logstage-logstage-jvm"))
     skip in publish := true,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     scalaVersion := crossScalaVersions.value.head
   )
@@ -4709,7 +4709,7 @@ lazy val `idealingua` = (project in file(".agg/idealingua-v1-idealingua"))
     skip in publish := true,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     scalaVersion := crossScalaVersions.value.head
   )
@@ -4732,7 +4732,7 @@ lazy val `idealingua-jvm` = (project in file(".agg/idealingua-v1-idealingua-jvm"
     skip in publish := true,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     scalaVersion := crossScalaVersions.value.head
   )
@@ -4860,7 +4860,7 @@ lazy val `izumi-jvm` = (project in file(".agg/.agg-jvm"))
     skip in publish := true,
     crossScalaVersions := Seq(
       "2.12.10",
-      "2.13.0"
+      "2.13.1"
     ),
     scalaVersion := crossScalaVersions.value.head
   )
