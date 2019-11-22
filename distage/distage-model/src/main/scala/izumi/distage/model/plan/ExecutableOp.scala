@@ -29,9 +29,6 @@ object ExecutableOp {
   }
 
   object WiringOp {
-    final case class InstantiateClass(target: DIKey, wiring: SingletonWiring.Constructor, origin: Option[Binding]) extends WiringOp
-    final case class InstantiateTrait(target: DIKey, wiring: SingletonWiring.AbstractSymbol, origin: Option[Binding]) extends WiringOp
-    final case class InstantiateFactory(target: DIKey, wiring: Factory, origin: Option[Binding]) extends WiringOp
     final case class CallProvider(target: DIKey, wiring: SingletonWiring.Function, origin: Option[Binding]) extends WiringOp
     final case class CallFactoryProvider(target: DIKey, wiring: FactoryFunction, origin: Option[Binding]) extends WiringOp
     final case class ReferenceInstance(target: DIKey, wiring: SingletonWiring.Instance, origin: Option[Binding]) extends WiringOp

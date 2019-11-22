@@ -652,7 +652,7 @@ lazy val `distage-model` = project.in(file("distage/distage-model"))
       "org.typelevel" %% "cats-core" % V.cats % Optional,
       "org.typelevel" %% "cats-effect" % V.cats_effect % Optional,
       "dev.zio" %% "zio" % V.zio % Optional,
-      "org.scala-lang" % "scala-reflect" % scalaVersion.value
+      "org.scala-lang" % "scala-reflect" % scalaVersion.value % Provided
     )
   )
   .settings(
@@ -729,7 +729,8 @@ lazy val `distage-proxy-cglib` = project.in(file("distage/distage-proxy-cglib"))
       compilerPlugin("org.typelevel" % "kind-projector" % V.kind_projector cross CrossVersion.full),
       "org.scala-lang.modules" %% "scala-collection-compat" % V.collection_compat,
       "org.scalatest" %% "scalatest" % V.scalatest % Test,
-      "cglib" % "cglib-nodep" % V.cglib_nodep
+      "cglib" % "cglib-nodep" % V.cglib_nodep,
+      "org.scala-lang" % "scala-reflect" % scalaVersion.value % Provided
     )
   )
   .settings(
@@ -807,7 +808,7 @@ lazy val `distage-core` = project.in(file("distage/distage-core"))
       compilerPlugin("org.typelevel" % "kind-projector" % V.kind_projector cross CrossVersion.full),
       "org.scala-lang.modules" %% "scala-collection-compat" % V.collection_compat,
       "org.scalatest" %% "scalatest" % V.scalatest % Test,
-      "cglib" % "cglib-nodep" % V.cglib_nodep
+      "org.scala-lang" % "scala-reflect" % scalaVersion.value % Provided
     )
   )
   .settings(
